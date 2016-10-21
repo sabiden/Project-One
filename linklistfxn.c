@@ -9,7 +9,13 @@ typedef struct song_node{
 } song_node;
 
 
-
+song_node * insert_first(song_node * list, char * a, char * s){
+  song_node * newNode = (song_node *) malloc(sizeof(song_node));
+  strcpy(newNode->name, s);
+  strcpy(newNode->artist, a);
+  newNode->next = NULL;
+  return newNode;
+}
 
 
 song_node * insert_front(song_node * list, char * a, char * s){
@@ -146,7 +152,7 @@ song_node * remove_song(song_node * list, char * s ){
 }
 
 
-
+/*
 void main(){
   song_node * A = (song_node *) malloc(sizeof(song_node));
   A = NULL;
@@ -190,3 +196,4 @@ void main(){
   //print_songNodes(A);
 }
 
+*/
